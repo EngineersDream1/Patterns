@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Strategy.Core.Interfaces;
 
-namespace Strategy
+namespace Strategy.Core.Classes
 {
-    public class Squeak : QuackBehaviour
+    public class MuteQuack : QuackBehaviour
     {
         public void Quack()
         {
-            Console.WriteLine("Squeak!");
+            Console.WriteLine("Silence");
         }
     }
 }

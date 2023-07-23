@@ -3,26 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Strategy.Core.Interfaces;
 
 namespace Strategy
 {
     public abstract class Duck
     {
-        FlyBehaviour flyBehaviour;
-        QuackBehaviour quackBehaviour;
+        public FlyBehaviour flyBehaviour;
+        public QuackBehaviour quackBehaviour;
 
-        public Duck(FlyBehaviour flyBehaviour, QuackBehaviour quackBehaviour)
-        {
-            this.flyBehaviour = flyBehaviour;
-            this.quackBehaviour = quackBehaviour;
-        }
+        public abstract void Display();
 
-        public void performFly()
+        public void PerformFly()
         {
             flyBehaviour.Fly();
         }
 
-        public void performQuack()
+        public void PerformQuack()
         {
             quackBehaviour.Quack();
         }

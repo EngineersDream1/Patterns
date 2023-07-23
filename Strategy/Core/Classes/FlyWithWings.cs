@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Strategy.Core.Interfaces;
 
-namespace Strategy
+namespace Strategy.Core.Classes
 {
-    public class FlyNoWay : FlyBehaviour
+    public class FlyWithWings : FlyBehaviour
     {
         public void Fly()
         {
-            Console.WriteLine("I can't flying!");
+            Console.WriteLine("I can flying!");
         }
     }
 }
