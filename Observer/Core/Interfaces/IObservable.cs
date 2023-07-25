@@ -8,7 +8,7 @@ namespace Observer.Core.Interfaces
 {
     interface IObservable
     {
-        public void AddObserver(IObserver o);
+        public void RegisterObserver(IObserver o);
         public void RemoveObserver(IObserver o);
         void NotifyObservers();
     }

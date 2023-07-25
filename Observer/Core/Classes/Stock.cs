@@ -18,7 +18,7 @@ namespace Observer.Core.Classes
             stockInfo= new StockInfo();
         }
 
-        public void AddObserver(IObserver o)
+        public void RegisterObserver(IObserver o)
         {
             observers.Add(o);
         }
@@ -32,7 +32,7 @@ namespace Observer.Core.Classes
         {
             foreach(IObserver o in observers)
             {
-                o.Update();
+                o.Update(stockInfo);
             }
         }
 

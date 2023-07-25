@@ -8,6 +8,6 @@ namespace Observer.Core.Interfaces
 {
     interface IObserver
     {
-        void Update();
+        void Update(Object ob);
     }
 }
